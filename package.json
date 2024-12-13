@@ -32,7 +32,7 @@
     "test": "echo \"Please use 'next:test', 'electron:test' or 'all:text'\" && exit 1",
     "all:test": "npm run next:test && npm run electron:test",
     "next:dev": "next dev renderer",
-    "next:build": "next build renderer",
+    "next:build": "cd renderer && next build && next export",
     "next:start": "serve app -p 80",
     "next:test": "echo \"Error: no test specified\" && exit 1",
     "electron:dev": "nextron",

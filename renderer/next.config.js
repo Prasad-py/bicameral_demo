@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
   output: 'export',
-  distDir: '../out',
+  distDir: 'out',
   images: {
     unoptimized: true
   },
@@ -11,6 +11,7 @@ module.exports = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  basePath: '/bicameral_demo',
-  assetPrefix: '/bicameral_demo/',
+  basePath: '',
+  assetPrefix: '',
+  trailingSlash: true,
 }
