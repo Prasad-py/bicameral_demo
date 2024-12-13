@@ -1,8 +1,7 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
   output: 'export',
-  distDir: process.env.NODE_ENV === 'production' ? '../app' : '.next',
-  trailingSlash: true,
+  distDir: 'out',
   images: {
     unoptimized: true
   },
@@ -10,9 +9,8 @@ module.exports = {
     ignoreBuildErrors: true,
   },
   eslint: {
-    ignoreDuringBuilds: true, // Disable ESLint checks during builds
+    ignoreDuringBuilds: true,
   },
-  webpack: config => {
-    return config
-  }
+  basePath: '/bicameral_demo',
+  assetPrefix: '/bicameral_demo/',
 }
