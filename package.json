@@ -46,7 +46,7 @@
     "electron:build-mac": "nextron build --mac",
     "electron:build-mac-universal": "nextron build --mac --universal",
     "electron:test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "next build renderer && touch out/.nojekyll && gh-pages -d out -t true",
+    "deploy": "next build renderer && mkdir -p out && touch out/.nojekyll && cp -r app/* out/ && gh-pages -d out -t true",
     "predeploy": "next build renderer"
   },
   "dependencies": {
